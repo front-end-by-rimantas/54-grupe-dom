@@ -25,3 +25,27 @@ setInterval(() => {
     // pDOM.style.fontSize = (pTime / 10) + 'rem';
 }, 10);
 
+const vegetables = ['pomidoras', 'agurkas', 'svogunas', 'bulve'];
+const vegsDOM = document.querySelector('.vegs');
+let vegsHTML = '';
+
+for (const veg of vegetables) {
+    vegsHTML += `<li>${veg}</li>`;
+}
+
+vegsDOM.innerHTML = vegsHTML;
+
+const names = ['Jonas', 'Maryte', 'Petras', 'Ona'];
+const namesDOM = document.querySelector('.names');
+
+for (const name of names) {
+    namesDOM.insertAdjacentHTML('beforeend', `<li>${name}</li>`);
+}
+
+const fonts = ['Arial', 'xxx', 'Verdana', 'Tahoma', 'cursive', 'sans-serif'];
+const fontsDOM = document.querySelector('.fonts');
+
+for (const font of fonts) {
+    const HTML = `<li style="font-family: ${font};">${font}</li>`;
+    fontsDOM.insertAdjacentHTML('beforeend', HTML);
+}
