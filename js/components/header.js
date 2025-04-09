@@ -7,9 +7,17 @@ export function header() {
         { text: 'Header', href: '/header' },
     ];
 
+    const lp = location.pathname;
+    const currentPage = lp.length > 1 && lp.at(-1) === '/' ? lp.slice(0, -1) : lp;
     let linksHTML = '';
+
     for (const link of menu) {
-        linksHTML += `<a class="link" href="${link.href}">${link.text}</a>`;
+        let activePage = '';
+        if (link.href === currentPage) {
+            activePage = 'active';
+        }
+
+        linksHTML += `<a class="link ${activePage}" href="${link.href}">${link.text}</a>`;
     }
 
     const HTML = `
