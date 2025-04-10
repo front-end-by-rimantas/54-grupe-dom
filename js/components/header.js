@@ -1,15 +1,16 @@
 export function header() {
     if (location.hostname !== 'localhost') {
-        document.head.insertAdjacentHTML('afterbegin', '<base href="https://front-end-by-rimantas.github.io/54-grupe-dom">');
+        const base = 'https://front-end-by-rimantas.github.io/54-grupe-dom/';
+        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
     }
 
     const menu = [
-        { text: 'Home', href: '/' },
-        { text: 'Text', href: '/text' },
-        { text: 'Food', href: '/food' },
-        { text: 'Darzas', href: '/darzas' },
-        { text: 'Header', href: '/header' },
-        { text: 'Click', href: '/click' },
+        { text: 'Home', href: './' },
+        { text: 'Text', href: './text' },
+        { text: 'Food', href: './food' },
+        { text: 'Darzas', href: './darzas' },
+        { text: 'Header', href: './header' },
+        { text: 'Click', href: './click' },
     ];
 
     const lp = location.pathname;
@@ -27,7 +28,7 @@ export function header() {
 
     const HTML = `
         <header class="main-header">
-            <img class="logo" src="/img/logo.png" alt="Logo">
+            <img class="logo" src="./img/logo.png" alt="Logo">
             <nav class="main-nav">${linksHTML}</nav>
         </header>`;
 
