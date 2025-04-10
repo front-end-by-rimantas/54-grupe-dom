@@ -12,33 +12,19 @@
 <body>
     <h1>Like</h1>
 
-    <button type="button" class="btn">+</button>
+    <button id="add" type="button" class="btn">+</button>
 
-    <ul class="list">
-        <li class="item">
-            <span class="count">0</span>
-            <p class="text">Laba diena 1</p>
-            <form class="actions">
-                <button type="button" class="btn">-</button>
-                <button type="button" class="btn">+</button>
-            </form>
-        </li>
-        <li class="item">
-            <span class="count">0</span>
-            <p class="text">Laba diena 2</p>
-            <form class="actions">
-                <button type="button" class="btn">-</button>
-                <button type="button" class="btn">+</button>
-            </form>
-        </li>
-        <li class="item">
-            <span class="count">0</span>
-            <p class="text">Laba diena 3</p>
-            <form class="actions">
-                <button type="button" class="btn">-</button>
-                <button type="button" class="btn">+</button>
-            </form>
-        </li>
+    <ul id="list" class="list">
+        <template id="item">
+            <li class="item">
+                <span class="count">0</span>
+                <p class="text">{{text}}</p>
+                <form class="actions">
+                    <button type="button" class="btn">-</button>
+                    <button type="button" class="btn">+</button>
+                </form>
+            </li>
+        </template>
     </ul>
 
     <script type="module" src="../js/pages/like.js"></script>
