@@ -1,16 +1,17 @@
 export function header() {
+    let base = 'http://localhost:5408/';
     if (location.hostname !== 'localhost') {
-        const base = 'https://front-end-by-rimantas.github.io/54-grupe-dom/';
-        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
+        base = 'https://front-end-by-rimantas.github.io/54-grupe-dom/';
     }
+    document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
 
     const menu = [
-        { text: 'Home', href: './' },
-        { text: 'Text', href: './text' },
-        { text: 'Food', href: './food' },
-        { text: 'Darzas', href: './darzas' },
-        { text: 'Header', href: './header' },
-        { text: 'Click', href: './click' },
+        { text: 'Home', href: '/' },
+        { text: 'Text', href: '/text/' },
+        { text: 'Food', href: '/food/' },
+        { text: 'Darzas', href: '/darzas/' },
+        { text: 'Header', href: '/header/' },
+        { text: 'Click', href: '/click/' },
     ];
 
     const lp = location.pathname;
